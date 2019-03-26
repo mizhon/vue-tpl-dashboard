@@ -18,3 +18,5 @@ const config = {
     xDeviceId: undefined
   }
 }
+
+export default config;

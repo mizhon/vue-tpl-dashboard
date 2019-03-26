@@ -77,5 +77,7 @@ export default function $axios(options) {
       // 处理请求
       instance();
     })
+
+    console.log(createAxios);
   })
 }
