@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <img src="./assets/imgs/logo.png">
-    {{#router}}
+    <!-- {{#router}} -->
     <router-view/>
-    {{else}}
+    <!-- {{else}} -->
     <HelloWorld/>
-    {{/router}}
+    <!-- {{/router}} -->
   </div>
 </template>
 
