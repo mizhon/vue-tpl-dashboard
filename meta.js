@@ -35,12 +35,12 @@ module.exports = {
   },
 
   prompts: {
-    name: {
-      when: 'false',
-      type: 'string',
-      required: true,
-      message: 'Project name',
-    },
+    // name: {
+    //   when: 'isNotTest',
+    //   type: 'string',
+    //   required: true,
+    //   message: 'Project name',
+    // },
     // description: {
     //   when: 'isNotTest',
     //   type: 'string',
