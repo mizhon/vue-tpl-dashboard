@@ -35,12 +35,12 @@ module.exports = {
   },
 
   prompts: {
-    // name: {
-    //   when: 'isNotTest',
-    //   type: 'string',
-    //   required: true,
-    //   message: 'Project name',
-    // },
+    name: {
+      when: 'false',
+      type: 'string',
+      required: true,
+      message: 'Project name',
+    },
     // description: {
     //   when: 'isNotTest',
     //   type: 'string',
@@ -171,7 +171,6 @@ module.exports = {
     chalk
   }) {
 
-    console.log('DATA ------>', data);
     const green = chalk.green
 
     sortDependencies(data, green)
