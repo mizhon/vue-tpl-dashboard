@@ -41,18 +41,18 @@ module.exports = {
       required: true,
       message: 'Project name',
     },
-    description: {
-      when: 'isNotTest',
-      type: 'string',
-      required: false,
-      message: 'Project description',
-      default: 'A Vue.js project',
-    },
-    author: {
-      when: 'isNotTest',
-      type: 'string',
-      message: 'Author',
-    },
+    // description: {
+    //   when: 'isNotTest',
+    //   type: 'string',
+    //   required: false,
+    //   message: 'Project description',
+    //   default: 'A Vue.js project',
+    // },
+    // author: {
+    //   when: 'isNotTest',
+    //   type: 'string',
+    //   message: 'Author',
+    // },
     build: {
       when: 'isNotTest',
       type: 'list',
