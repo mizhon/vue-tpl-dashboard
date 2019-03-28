@@ -48,11 +48,11 @@ module.exports = {
     //   message: 'Project description',
     //   default: 'A Vue.js project',
     // },
-    // author: {
-    //   when: 'isNotTest',
-    //   type: 'string',
-    //   message: 'Author',
-    // },
+    author: {
+      when: 'false',
+      type: 'string',
+      message: 'Author',
+    },
     // build: {
     //   when: 'isNotTest',
     //   type: 'list',
