@@ -1,7 +1,7 @@
 {
-  "name": "dk-fe",
+  "name": "admin-tpl",
   "version": "1.0.0",
-  "description": "{{ description }}",
+  "description": "An admin template based on iView",
   "author": "",
   "private": true,
   "scripts": {
