@@ -2,7 +2,7 @@
   "name": "admin-tpl",
   "version": "1.0.0",
   "description": "An admin template based on iView",
-  "author": "",
+  "author": "mizhon@live.cn",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
