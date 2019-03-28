@@ -36,9 +36,9 @@ module.exports = {
 
   prompts: {
     name: {
-      when: 'false',
+      when: 'isNotTest',
       type: 'string',
-      required: false,
+      required: true,
       message: 'Project name',
     },
     // description: {
@@ -49,7 +49,7 @@ module.exports = {
     //   default: 'A Vue.js project',
     // },
     author: {
-      when: 'false',
+      when: 'isNotTest',
       type: 'string',
       message: 'Author',
     },
