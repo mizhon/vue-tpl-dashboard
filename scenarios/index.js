@@ -19,7 +19,7 @@ exports.addTestAnswers = (metalsmith, options, helpers) => {
   )
 }
 
-console.log(' INDEX in SCENARIOS: ', index)
-console.log(' isTest: ', isTest)
-console.log(' scenario: ', scenario)
-console.log(' addTestAnswers: ', addTestAnswers)
+// console.log(' INDEX in SCENARIOS: ', index)
+// console.log(' isTest: ', isTest)
+// console.log(' scenario: ', scenario)
+// console.log(' addTestAnswers: ', addTestAnswers)
