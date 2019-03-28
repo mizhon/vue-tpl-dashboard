@@ -51,9 +51,7 @@ exports.runLintFix = function runLintFix(cwd, data, color) {
     )
     console.log('# ========================\n')
     const args =
-      data.autoInstall === 'npm'
-        ? ['run', 'lint', '--', '--fix']
-        : ['run', 'lint', '--fix']
+      data.autoInstall === 'npm' ? ['run', 'lint', '--', '--fix'] : ['run', 'lint', '--fix']
     return runCommand(data.autoInstall, args, {
       cwd,
     })
@@ -65,7 +63,10 @@ exports.runLintFix = function runLintFix(cwd, data, color) {
  * Prints the final message with instructions of necessary next steps.
  * @param {Object} data Data from questionnaire.
  */
-exports.printMessage = function printMessage(data, { green, yellow }) {
+exports.printMessage = function printMessage(data, {
+  green,
+  yellow
+}) {
   const message = `
 # ${green('Project initialization finished!')}
 # ========================
@@ -91,9 +92,9 @@ Documentation can be found at https://vuejs-templates.github.io/webpack
 function lintMsg(data) {
   return !data.autoInstall &&
     data.lint &&
-    lintStyles.indexOf(data.lintConfig) !== -1
-    ? 'npm run lint -- --fix (or for yarn: yarn run lint --fix)\n  '
-    : ''
+    lintStyles.indexOf(data.lintConfig) !== -1 ?
+    'npm run lint -- --fix (or for yarn: yarn run lint --fix)\n  ' :
+    ''
 }
 
 /**
@@ -102,6 +103,7 @@ function lintMsg(data) {
  * @param {Object} data Data from the questionnaire
  */
 function installMsg(data) {
+  console.log('installMsg DATA --->', data);
   return !data.autoInstall ? 'npm install (or if using yarn: yarn)\n  ' : ''
 }
 
@@ -118,8 +120,7 @@ function runCommand(cmd, args, options) {
     const spwan = spawn(
       cmd,
       args,
-      Object.assign(
-        {
+      Object.assign({
           cwd: process.cwd(),
           stdio: 'inherit',
           shell: true,
