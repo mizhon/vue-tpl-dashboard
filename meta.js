@@ -170,6 +170,8 @@ module.exports = {
   complete: function (data, {
     chalk
   }) {
+
+    console.log('DATA ------>', data);
     const green = chalk.green
 
     sortDependencies(data, green)
