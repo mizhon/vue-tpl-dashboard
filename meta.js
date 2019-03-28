@@ -35,12 +35,12 @@ module.exports = {
   },
 
   prompts: {
-    name: {
-      when: 'isNotTest',
-      type: 'string',
-      required: true,
-      message: 'Project name',
-    },
+    // name: {
+    //   when: 'isNotTest',
+    //   type: 'string',
+    //   required: true,
+    //   message: 'Project name',
+    // },
     // description: {
     //   when: 'isNotTest',
     //   type: 'string',
@@ -48,11 +48,11 @@ module.exports = {
     //   message: 'Project description',
     //   default: 'A Vue.js project',
     // },
-    author: {
-      when: 'isNotTest',
-      type: 'string',
-      message: 'Author',
-    },
+    // author: {
+    //   when: 'isNotTest',
+    //   type: 'string',
+    //   message: 'Author',
+    // },
     // build: {
     //   when: 'isNotTest',
     //   type: 'list',
