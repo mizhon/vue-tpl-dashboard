@@ -3,20 +3,22 @@
 Even though the template based on vue-cli 2.x is considering as deprecated, but it's still good to use and satified many scenarios and situations. So fork the origin repository for private or specific project such as FE dashboard project and etc.
 In another words, this repository will customized as an ADMIN-DASHBOARD vue.js templates for me or others who would like to use.
 
-## Vue-cli 3 is here, so this template is now considered deprecated.
-
-This template was the main template for vue-cli verison 2.\*.
-
-Now that we have released a [stable version of vue-cli 3](https://cli.vuejs.org), which incorporates all features that this template offers (and much more), we think that this template doesn't have any significant use for the future, so we won't put much resource in developing it further.
-
-We will try and fix major issues should they arise, but not much more.
-
-Feel free to fork this template if you want to keep it alive.
-
 ## Documentation
 
 - [For this template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
 - [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
+
+## Customization
+
+:warning: **This template DO NOT have prompts during download & install process b/c the settings are already configed in package.json file**
+
+    - build           : Runtime + Compiler
+    - router          : Vue-router
+    - lint            : ESLint
+    - lint config     : Standard (https://github.com/standard/standard)
+    - unit test       : Karma and Mocha
+    - package install : NPM
+    - e2e             : none
 
 ## Usage
 
@@ -24,7 +26,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ```bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init mizhon/vue-tpl-dashboard my-project
 $ cd my-project
 $ npm install
 $ npm run dev
@@ -33,7 +35,7 @@ $ npm run dev
 This will scaffold the project using the `master` branch. If you wish to use the latest version of the webpack template, do the following instead:
 
 ```bash
-$ vue init webpack#develop my-project
+$ vue init mizhon/vue-tpl-dashboard#develop my-project
 ```
 
 :warning: **The develop branch is not considered stable and can contain bugs or not build at all, so use at your own risk.**
@@ -68,6 +70,16 @@ The development server will run on port 8080 by default. If that port is already
   - Works with one command out of the box:
     - Selenium and chromedriver dependencies automatically handled.
     - Automatically spawns the Selenium server.
+
+## Vue-cli 3 is here, so this template is now considered deprecated.
+
+This template was the main template for vue-cli verison 2.\*.
+
+Now that we have released a [stable version of vue-cli 3](https://cli.vuejs.org), which incorporates all features that this template offers (and much more), we think that this template doesn't have any significant use for the future, so we won't put much resource in developing it further.
+
+We will try and fix major issues should they arise, but not much more.
+
+Feel free to fork this template if you want to keep it alive.
 
 ### Fork It And Make Your Own
 
