@@ -1,6 +1,7 @@
 # Admin Dashboard Boilerplate for Vue.js
 
 Even though the template based on vue-cli 2.x is considering as deprecated, but it's still good to use and satified many scenarios and situations. So fork the origin repository for private or specific project such as FE dashboard project and etc.
+
 In another words, this repository will customized as an ADMIN-DASHBOARD vue.js templates for me or others who would like to use.
 
 ## Documentation
