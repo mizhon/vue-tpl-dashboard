@@ -1,6 +1,6 @@
 const scenarios = [
-  'full', 
-  'full-karma-airbnb', 
+  'full',
+  'full-karma-airbnb',
   'minimal'
 ]
 
@@ -12,8 +12,9 @@ const scenario = isTest && require(`./${scenarios[index]}.json`)
 
 exports.addTestAnswers = (metalsmith, options, helpers) => {
   Object.assign(
-    metalsmith.metadata(),
-    { isNotTest: !isTest },
+    metalsmith.metadata(), {
+      isNotTest: !isTest
+    },
     isTest ? scenario : {}
   )
 }
