@@ -24,13 +24,13 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'no-extra-semi': 'error',
+    'space-before-function-paren': 'error',
     // allow async-await
     'generator-star-spacing': 'off',
     'no-trailing-spaces': 'off',
     'quotes': 'off',
     'semi': 'off',
-    'no-extra-semi': 'error',
-    'space-before-function-paren': 'error',
     'no-trailing-spaces': 'off',
     'space-before-function-paren': 'off',
     'no-extra-parens': 'off',
