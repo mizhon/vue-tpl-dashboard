@@ -176,6 +176,8 @@ module.exports = {
     sortDependencies(data, green)
 
     const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
+    // force auto install without user confirm
+    data.autoInstall = true
 
     if (data.autoInstall) {
       installDependencies(cwd, data.autoInstall, green)
