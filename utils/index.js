@@ -43,6 +43,7 @@ exports.installDependencies = function installDependencies(
  * @param {object} data Data from questionnaire
  */
 exports.runLintFix = function runLintFix(cwd, data, color) {
+  console.log('runLintFix data =====> :', data)
   if (data.lint && lintStyles.indexOf(data.lintConfig) !== -1) {
     console.log(
       `\n\n${color(
