@@ -103,7 +103,9 @@ function lintMsg(data) {
  * @param {Object} data Data from the questionnaire
  */
 function installMsg(data) {
-  console.log('installMsg DATA --->', data);
+  // set autoInstall property to true
+  data.autoInstall = true;
+  console.log('install message --->', data);
   return !data.autoInstall ? 'npm install (or if using yarn: yarn)\n  ' : ''
 }
 
