@@ -43,7 +43,6 @@ exports.installDependencies = function installDependencies(
  * @param {object} data Data from questionnaire
  */
 exports.runLintFix = function runLintFix(cwd, data, color) {
-  console.log('runLintFix data =====> :', data)
   if (data.lint && lintStyles.indexOf(data.lintConfig) !== -1) {
     console.log(
       `\n\n${color(
@@ -69,18 +68,18 @@ exports.printMessage = function printMessage(data, {
   yellow
 }) {
   const message = `
-# ${green('Project initialization finished!')}
+# ${green('前端 vue.js 工程初始化完成!')}
 # ========================
 
-To get started:
+快速开始:
 
   ${yellow(
     `${data.inPlace ? '' : `cd ${data.destDirName}\n  `}${installMsg(
       data
     )}${lintMsg(data)}npm run dev`
   )}
-  
-Documentation can be found at https://github.com/mizhon/vue-tpl-dashboard
+
+# ========================  
 `
   console.log(message)
 }
@@ -106,7 +105,6 @@ function lintMsg(data) {
 function installMsg(data) {
   // set autoInstall property to true
   data.autoInstall = true;
-  console.log('install message --->', data);
   return !data.autoInstall ? 'npm install (or if using yarn: yarn)\n  ' : ''
 }
 
