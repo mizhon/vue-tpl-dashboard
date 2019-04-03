@@ -2,7 +2,6 @@ import axios from 'axios';
 import apiConfig from './api-config';
 
 export default function $axios(options) {
-
   return new Promise((resolve, reject) => {
     const createAxios = ((res) => {
       const headers = {
@@ -21,12 +20,11 @@ export default function $axios(options) {
         method: options.method || "GET",
         transformResponse: [
           function (data) {
-            let res = typeof data == "string" ? JSON.parse(data) : data;
+            let res = typeof data === "string" ? JSON.parse(data) : data;
             return res;
           }
         ]
       })
-
       // --------------------------------------------
       // request 拦截器
       // --------------------------------------------
@@ -39,18 +37,15 @@ export default function $axios(options) {
           return Promise.reject(error);
         }
       )
-
       // --------------------------------------------
       // response 拦截器
       // --------------------------------------------
       instance.interceptors.response.use(
         res => {
-
           // 处理请求相应
           // 1. 未登陆
           // 2. session 过期
           // 3. 网络连接等
-
           console.log("response 响应数据: ", res.data);
           return resolve(res);
         },
@@ -68,16 +63,13 @@ export default function $axios(options) {
               default:
             }
           }
-
           console.error("axios 请求错误: ", err)
           return reject(err); // 返回接口返回的错误
         }
       );
-
       // 处理请求
       instance();
     })
-
     console.log(createAxios);
   })
 }

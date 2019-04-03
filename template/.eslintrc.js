@@ -32,6 +32,7 @@ module.exports = {
     'no-extra-semi': 'error',
     'space-before-function-paren': 'error',
     'no-trailing-spaces': 'off',
+    'space-before-function-paren': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
