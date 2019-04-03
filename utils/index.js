@@ -105,7 +105,7 @@ function lintMsg(data) {
 function installMsg(data) {
   // set autoInstall property to true
   data.autoInstall = true;
-  // console.log('install message --->', data);
+  console.log('install message --->', data);
   return !data.autoInstall ? 'npm install (or if using yarn: yarn)\n  ' : ''
 }
 

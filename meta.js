@@ -172,13 +172,13 @@ module.exports = {
   }) {
 
     const green = chalk.green
-
+    console.log('data:', data)
     sortDependencies(data, green)
 
     const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
     // force auto install without user confirm
-    data.autoInstall = true
-
+    // data.autoInstall = true
+    console.log('meta.js data object: ---->', data)
     if (data.autoInstall) {
       installDependencies(cwd, data.autoInstall, green)
         .then(() => {
