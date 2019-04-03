@@ -126,11 +126,11 @@ module.exports = {
     //     },
     //   ],
     // },
-    // e2e: {
-    //   when: 'isNotTest',
-    //   type: 'confirm',
-    //   message: 'Setup e2e tests with Nightwatch?',
-    // },
+    e2e: {
+      when: 'false',
+      type: 'confirm',
+      message: 'Setup e2e tests with Nightwatch?',
+    },
     // autoInstall: {
     //   when: 'isNotTest',
     //   type: 'list',
