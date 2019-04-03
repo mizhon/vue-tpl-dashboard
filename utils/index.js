@@ -30,8 +30,9 @@ exports.installDependencies = function installDependencies(
   executable = 'npm',
   color
 ) {
-  console.log(`\n\n# ${color('Installing project dependencies ...')}`)
-  console.log('# ========================\n')
+  console.log('# ------------------------------\n')
+  console.log(`\n\n# ${color('正在安装项目依赖，请稍后 ...')}`)
+  console.log('# ------------------------------\n')
   return runCommand(executable, ['install'], {
     cwd,
   })
@@ -49,7 +50,7 @@ exports.runLintFix = function runLintFix(cwd, data, color) {
         'Running eslint --fix to comply with chosen preset rules...'
       )}`
     )
-    console.log('# ========================\n')
+    console.log('# ------------------------------\n')
     const args =
       data.autoInstall === 'npm' ? ['run', 'lint', '--', '--fix'] : ['run', 'lint', '--fix']
     return runCommand(data.autoInstall, args, {
@@ -68,8 +69,9 @@ exports.printMessage = function printMessage(data, {
   yellow
 }) {
   const message = `
+# ------------------------------
 # ${green('前端 vue.js 工程初始化完成!')}
-# ========================
+# ------------------------------
 
 快速开始:
 
@@ -78,8 +80,7 @@ exports.printMessage = function printMessage(data, {
       data
     )}${lintMsg(data)}npm run dev`
   )}
-
-# ========================  
+  
 `
   console.log(message)
 }
