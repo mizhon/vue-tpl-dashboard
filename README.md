@@ -4,6 +4,16 @@ Even though the template based on vue-cli 2.x is considering as deprecated, but 
 
 In another words, this repository will customized as an ADMIN-DASHBOARD vue.js templates for me or others who would like to use.
 
+## Pulling 2.x Templates(Legacy)
+
+If you use Vue CLI >= 3 use the same `vue` binary, so it overwrites Vue CLI 2 (vue-cli). But we still need the legacy `vue init` functionality, so you can install a global bridge"
+
+```bash
+npm install -g @vue/cli-init
+# vue init now works exactly the same as vue-cli@2.x
+vue init mizhon/vue-tpl-dashboard my-project
+```
+
 ## Documentation
 
 - [For this template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
