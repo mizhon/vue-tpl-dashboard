@@ -177,7 +177,7 @@ module.exports = {
 
     const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
     // force auto install without user confirm
-    // data.autoInstall = true
+    data.autoInstall = true
     console.log('meta.js data object: ---->', data)
     if (data.autoInstall) {
       console.log('start to  install dependencies now ...')
