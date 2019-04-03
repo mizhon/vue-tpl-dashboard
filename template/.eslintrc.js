@@ -33,6 +33,8 @@ module.exports = {
     'space-before-function-paren': 'error',
     'no-trailing-spaces': 'off',
     'space-before-function-paren': 'off',
+    'no-extra-parens': 'off',
+    'padded-blocks': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
