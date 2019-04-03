@@ -30,9 +30,8 @@ exports.installDependencies = function installDependencies(
   executable = 'npm',
   color
 ) {
-  console.log('# ------------------------------\n')
   console.log(`\n\n# ${color('正在安装项目依赖，请稍后 ...')}`)
-  console.log('# ------------------------------\n')
+  console.log('# ----------------------------\n')
   return runCommand(executable, ['install'], {
     cwd,
   })
@@ -69,9 +68,9 @@ exports.printMessage = function printMessage(data, {
   yellow
 }) {
   const message = `
-# ------------------------------
+# ----------------------------
 # ${green('前端 vue.js 工程初始化完成!')}
-# ------------------------------
+# ----------------------------
 
 快速开始:
 
