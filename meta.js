@@ -180,6 +180,7 @@ module.exports = {
     // data.autoInstall = true
     console.log('meta.js data object: ---->', data)
     if (data.autoInstall) {
+      console.log('start to  install dependencies now ...')
       installDependencies(cwd, data.autoInstall, green)
         .then(() => {
           return runLintFix(cwd, data, green)
