@@ -12,6 +12,11 @@
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "iview": "^3.2.1",
@@ -82,7 +87,8 @@
     "portfinder": "^1.0.13",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "husky": "^1.0.0-rc.6"
   },
   "engines": {
     "node": ">= 6.0.0",
