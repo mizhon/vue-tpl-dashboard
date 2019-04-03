@@ -4,7 +4,6 @@ module.exports = {
   root: true,
   //ESLint默认使用Espree作为其解析器
   //同时babel-eslint也是用得最多的解析器
-  parser: 'espree',
   parserOptions: {
     parser: 'babel-eslint',
     ecmaVersion: 2017
@@ -12,7 +11,6 @@ module.exports = {
   env: {
     "browser": true,
     "node": true,
-    "mocha": true,
     "es6": true
   },
   extends: [
