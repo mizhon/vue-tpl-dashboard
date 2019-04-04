@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { TopNav, SideBar, Main } from './frame'
+import { TopNav, Sidebar, Main } from './frame'
 
 const LAYOUT_COMPONENT = 'Layout'
 
@@ -28,6 +28,7 @@ export default {
   },
   computed: {
     sidebar() {
+      console.log(this.$store)
       return this.$store.state.app.sidebar
     },
     device() {
