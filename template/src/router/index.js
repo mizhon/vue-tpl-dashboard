@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@components/HelloWorld'
 /* Layout */
-import Layout from '@components/layout/Layout'
+import Layout from '../components/layout'
 
 Vue.use(Router)
 
@@ -21,11 +20,11 @@ Vue.use(Router)
 **/
 export const routerMap = [{
   path: '/login',
-  component: () => import('@views/login/Login.vue'),
+  component: () => import('../views/login/Login.vue'),
   hidden: true
 }, {
   path: '/404',
-  component: () => import('@components/errors/404.vue'),
+  component: () => import('../components/errors/404.vue'),
   hidden: true
 }, {
   path: '/',
@@ -35,7 +34,7 @@ export const routerMap = [{
   hidden: true,
   children: [{
     path: 'dashboard',
-    component: () => import('@views/dashboard/Dashboard.vue')
+    component: () => import('../views/dashboard/Dashboard.vue')
   }]
 }]
 
