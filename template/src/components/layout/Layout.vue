@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { TopNav, Sidebar, Main } from './frame'
+import { TopNav, SideBar, Main } from './frame'
 
 const LAYOUT_COMPONENT = 'Layout'
 
