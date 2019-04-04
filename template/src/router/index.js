@@ -21,11 +21,11 @@ Vue.use(Router)
 **/
 export const routerMap = [{
   path: '/login',
-  component: () => import('@views/login'),
+  component: () => import('@views/login/Login.vue'),
   hidden: true
 }, {
   path: '/404',
-  component: () => import('@views/errors/404'),
+  component: () => import('@components/errors/404.vue'),
   hidden: true
 }, {
   path: '/',
@@ -35,7 +35,7 @@ export const routerMap = [{
   hidden: true,
   children: [{
     path: 'dashboard',
-    component: () => import('@views/dashboard/index')
+    component: () => import('@views/dashboard/Dashboard.vue')
   }]
 }]
 
