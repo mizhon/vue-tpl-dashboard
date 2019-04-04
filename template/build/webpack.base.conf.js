@@ -50,12 +50,6 @@ module.exports = {
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
-      // {
-      //   rules: [{
-      //     test: /\.less$/,
-      //     loader: 'less-loader' // compiles Less to CSS
-      //   }]
-      // },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
