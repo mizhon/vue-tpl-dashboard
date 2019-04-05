@@ -1,3 +1,7 @@
+import {
+  getToken
+} from '@utils/auth'
+
 const user = {
   state: {
     token: getToken(),

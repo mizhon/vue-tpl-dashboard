@@ -29,7 +29,8 @@ router.beforeEach((to, from, next) => {
 
       // if current page is default, it will not trigger afterEach hook, so manually handle it
       NProgress.done()
-    } else {
+    }
+    else {
       if (StorageEvent.getters.roles.length === 0) {
         store.dispatch('GetInfo').then(res => {
           next()
@@ -41,11 +42,13 @@ router.beforeEach((to, from, next) => {
             })
           })
         })
-      } else {
+      }
+      else {
         next()
       }
     }
-  } else {
+  }
+  else {
     if (whiteList.indexOf(to.path) !== -1) {
       next()
     } else {
