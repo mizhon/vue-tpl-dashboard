@@ -20,4 +20,5 @@ const store = new Vuex.Store({
   }
 })
 
+console.log('store 中包含的对象.....', store)
 export default store

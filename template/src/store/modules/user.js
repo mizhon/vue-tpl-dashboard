@@ -1,6 +1,5 @@
-import {
-  getToken
-} from '@utils/auth'
+import { login, logout, getInfo } from '@/apis/login'
+import { getToken } from '@utils/auth'
 
 const user = {
   state: {
@@ -25,14 +24,18 @@ const user = {
   },
   actions: {
     // 登录
-    Login({
-      commit
-    }, userInfo) {
+    Login({ commit }, userInfo) {
       const username = userInfo.username.trim()
       return new Promise((resolve, reject) => {
-        // login action to check lgoin state:
-      }).catch(err => {
-        reject(err)
+        // login action to check lgoin state
+        login(username, userInfo.password).then( res => {
+          const data = res.data
+          setToken(data.token)
+          commit('SET_TOKEN', data.token)
+          resolve()
+        }).catch(err => {
+          reject(err)
+        })
       })
     },
 
@@ -43,19 +46,36 @@ const user = {
     }) {
       return new Promise((resolve, reject) => {
         // 处理用户信息
+        getInfo(state.token).then(res => {
+          const data = res.data
+          if (data.roles && data.roles.length > 0) { // 验证返回的roles是否是一个非空数组
+            commit('SET_ROLES', data.roles)
+          } else {
+            reject('getInfo: roles must be a non-null array !')
+          }
+          commit('SET_NAME', data.name)
+          commit('SET_AVATAR', data.avatar)
+          resolve(res)
+        }).catch(err => {
+          reject(err)
+        })
       })
     },
 
     // 登出
-    LogOut({
-      commit,
-      state
-    }) {
+    LogOut({ commit, state }) {
       return new Promise((resolve, reject) => {
-
-      }).catch(err => {
-        reject(err)
+        logout(state.token).then(() => {
+          commit('SET_TOKEN', '')
+          commit('SET_ROLES', [])
+          removeToken()
+          resolve()
+        }).catch(err => {
+            reject(err)
+        })
       })
     }
   }
 }
+
+export default user

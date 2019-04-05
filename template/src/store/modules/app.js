@@ -47,3 +47,5 @@ const app = {
     }
   }
 }
+
+export default user
