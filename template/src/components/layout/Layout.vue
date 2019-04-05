@@ -18,7 +18,6 @@
 import { TopNav, SideBar, Main } from './frame'
 
 const LAYOUT_COMPONENT = 'Layout'
-
 export default {
   name: LAYOUT_COMPONENT,
   components: {
