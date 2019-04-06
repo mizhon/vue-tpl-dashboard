@@ -1,7 +1,7 @@
 <template>
   <header class="dk-header">
     <div class="nav-logo">
-      <img :src="logoPath" width="30">
+      <img src="../../../assets/imgs/logo.png" width="30">
       <span class="nav-toggler-icon"><i class="iconfont icon-menu"></i></span>
     </div>
     <div class="nav-container">
@@ -19,13 +19,9 @@ const COMPONENT_NAME = 'dk-header'
 export default {
   name: COMPONENT_NAME,
   data() {
-    return {
-      logoPath: '../../../assets/imgs/logo.png'
-    };
+    return {};
   },
-  methods: {
-
-  }
+  methods: {}
 }
 </script>
 
