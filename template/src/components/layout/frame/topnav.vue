@@ -6,9 +6,13 @@
     </div>
     <div class="nav-container">
       <!-- 右侧头像，logout 按钮 -->
-      <ul>
-        <li></li>
-      </ul>
+      <div class="user-avatar">
+        <img src="../../../assets/imgs/logo.png"/>
+      </div>
+      <div class="nav-logout">
+        <span>Logout</span>
+        <i class="iconfont icon-arrow-down-bold"></i>
+      </div>
     </div>
   </header>
 </template>
@@ -29,14 +33,14 @@ export default {
 .dk-header {
   position: fixed;
   width: 100%;
-  height: 35px;
-  background-color: #24292e;
-  box-shadow: 0 4px 30px 0 rgba(223, 225, 230, 0.8);
+  height: 50px;
+  background-color: #fff; //#24292e;
+  box-shadow: 0 2px 20px 0 rgba(223, 225, 230, 0.8);
   overflow-x: hidden;
   .nav-logo {
     img {
       vertical-align: middle;
-      padding: 5px 15px;
+      padding: 10px 10px 10px 20px;
     }
     .nav-toggler-icon {
       display: inline-block;
@@ -48,6 +52,11 @@ export default {
     flex-direction: row;
     align-items: cneter;
     padding-right: 30px;
+    .nav-avatar {
+      width: 30px;
+      border-radius: 50%;
+    }
+
   }
 }
 </style>
