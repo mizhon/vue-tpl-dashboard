@@ -30,11 +30,11 @@ module.exports = {
     'space-before-function-paren': 'error',
     // allow async-await
     'generator-star-spacing': 'off',
+    'space-before-function-paren': 'off',
     'no-trailing-spaces': 'off',
     'quotes': 'off',
     'semi': 'off',
     'no-trailing-spaces': 'off',
-    'space-before-function-paren': 'off',
     'no-extra-parens': 'off',
     'padded-blocks': 'off',
     'no-multiple-empty-lines': 'off',
