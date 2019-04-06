@@ -1,3 +1,3 @@
-export { default as TopNav } from './TopNav.vue'
-export { default as SideBar } from './Sidebar.vue'
-export { default as Main } from './Main.vue'
+export { default as TopNav } from './topnav.vue'
+export { default as SideBar } from './sidebar.vue'
+export { default as Main } from './main.vue'

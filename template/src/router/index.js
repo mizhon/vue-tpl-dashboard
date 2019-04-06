@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 /* Layout */
-import Layout from '@components/layout/Layout.vue'
+import Layout from '@components/layout/layout.vue'
 
 Vue.use(Router)
 
@@ -19,14 +19,6 @@ Vue.use(Router)
   }
 **/
 export const routerMap = [{
-  path: '/login',
-  component: () => import('@views/login/Login.vue'),
-  hidden: true
-}, {
-  path: '/404',
-  component: () => import('@components/errors/404.vue'),
-  hidden: true
-}, {
   path: '/',
   name: 'Dashboard',
   component: Layout,
@@ -36,6 +28,16 @@ export const routerMap = [{
     path: 'dashboard',
     component: () => import('@views/dashboard/Dashboard.vue')
   }]
+},
+{
+    path: '/login',
+    component: () => import('@views/login/Login.vue'),
+    hidden: true
+},
+{
+    path: '/404',
+    component: () => import('@components/errors/404.vue'),
+    hidden: true
 }]
 
 export default new Router({

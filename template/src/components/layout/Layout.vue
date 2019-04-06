@@ -1,15 +1,9 @@
 <template>
-  <div :class="wrapperStyle" class="app-wrapper">
-    Layout
-    <div
-      v-if="device==='mobile'&&sidebar.opened"
-      class="drawer-bg"
-      @click="handleMobileSidebarClick"
-    />
-    <side-bar class="sidebar-container"/>
-    <div class="main-container">
-      <top-nav/>
-      <main/>
+  <div class ="container">
+    <top-nav></top-nav>
+    <div>
+      <side-bar></side-bar>
+      <router-view class="view"></router-view>
     </div>
   </div>
 </template>

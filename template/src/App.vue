@@ -11,4 +11,6 @@ export default {
 </script>
 
 <style lang="less">
+/** 全局样式设置 */
+@import './assets/styles/reset.less';
 </style>
