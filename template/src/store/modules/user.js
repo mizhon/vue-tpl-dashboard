@@ -28,7 +28,7 @@ const user = {
       const username = userInfo.username.trim()
       return new Promise((resolve, reject) => {
         // login action to check lgoin state
-        login(username, userInfo.password).then( res => {
+        login(username, userInfo.password).then(res => {
           const data = res.data
           setToken(data.token)
           commit('SET_TOKEN', data.token)

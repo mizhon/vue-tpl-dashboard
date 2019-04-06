@@ -17,32 +17,25 @@ router.beforeEach((to, from, next) => {
 
   if (getToken()) {
     if (to.path === '/login') {
-      next({
-        path: '/'
-      })
+      next({ path: '/' })
 
       // if current page is default, it will not trigger afterEach hook, so manually handle it
       NProgress.done()
-    }
-    else {
+    } else {
       if (StorageEvent.getters.roles.length === 0) {
         store.dispatch('GetInfo').then(res => {
           next()
         }).catch((err) => {
           store.dispatch('FedLogOut').then(() => {
             Message.error(err || 'Verification failed, please login again!')
-            next({
-              path: '/'
-            })
+            next({ path: '/' })
           })
         })
-      }
-      else {
+      } else {
         next()
       }
     }
-  }
-  else {
+  } else {
     if (whiteList.indexOf(to.path) !== -1) {
       next()
     } else {
