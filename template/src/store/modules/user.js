@@ -71,7 +71,7 @@ const user = {
           removeToken()
           resolve()
         }).catch(err => {
-            reject(err)
+          reject(err)
         })
       })
     }
