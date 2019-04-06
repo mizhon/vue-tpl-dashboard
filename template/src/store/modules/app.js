@@ -48,4 +48,4 @@ const app = {
   }
 }
 
-export default user
+export default app

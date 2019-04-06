@@ -4,17 +4,11 @@ import store from './store'
 import NProgress from 'nprogress'
 // progress bar style
 import 'nprogress/nprogress.css'
-import {
-  Message
-} from 'element-ui'
-import {
-  getToken
-} from '@utils/auth'
+import { Message } from 'element-ui'
+import { getToken } from '@utils/auth'
 
 // NProgress configuration
-NProgress.configure({
-  showSpinner: false
-})
+NProgress.configure({ showSpinner: false })
 
 // 不重定向白名单
 const whiteList = ['/login']
