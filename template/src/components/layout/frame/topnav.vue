@@ -1,17 +1,17 @@
 <template>
   <header class="dk-header">
-    <div class="nav-logo">
-      <img src="../../../assets/imgs/logo.png" width="30">
-      <span class="nav-toggler-icon"><i class="iconfont icon-menu"></i></span>
+    <div class="navbar-logo">
+      <!-- <img src="../../../assets/imgs/icon.svg"> -->
+      <img src="../../../assets/imgs/logo.png" width="30"/>
+      <span class="nav-toggler-icon"><i class="iconfont icon-menu">123</i></span>
     </div>
-    <div class="nav-container">
+    <div class="navbar-items">
       <!-- 右侧头像，logout 按钮 -->
       <div class="user-avatar">
-        <img src="../../../assets/imgs/logo.png"/>
+        <img src="../../../assets/imgs/female-avatar.svg" width="30"/>
       </div>
-      <div class="nav-logout">
+      <div class="logout">
         <span>Logout</span>
-        <i class="iconfont icon-arrow-down-bold"></i>
       </div>
     </div>
   </header>
@@ -33,30 +33,38 @@ export default {
 .dk-header {
   position: fixed;
   width: 100%;
-  height: 50px;
-  background-color: #fff; //#24292e;
+  height: 60px;
+  background-color: #fff; // #24292e;
   box-shadow: 0 2px 20px 0 rgba(223, 225, 230, 0.8);
   overflow-x: hidden;
-  .nav-logo {
+  z-index: 999;
+  .navbar-logo {
+    float: left;
+    height: 60px;
     img {
-      vertical-align: middle;
-      padding: 10px 10px 10px 20px;
+      padding: 15px 26px;
     }
     .nav-toggler-icon {
-      display: inline-block;
-      vertical-align: middle;
+      display: block;
+
     }
   }
-  .nav-container {
-    display: flex;
-    flex-direction: row;
-    align-items: cneter;
-    padding-right: 30px;
-    .nav-avatar {
-      width: 30px;
-      border-radius: 50%;
+  .navbar-items {
+    float: right;
+    height: 60px;
+    text-align: center;
+    .user-avatar {
+      display: inline-block;
+      padding: 14px 26px;
+      vertical-align:middle;
     }
-
+    .logout {
+      display: inline-block;
+      // color: #fff;
+      line-height: 60px;
+      vertical-align: middle;
+      padding-right: 30px;
+    }
   }
 }
 </style>

@@ -47,6 +47,7 @@ export default {
 
 <style rel="stylesheet/less" lang="less" scoped>
 .layout-wrapper {
+  // height: 100%;
 }
 </style>
 
