@@ -30,14 +30,14 @@ export const routerMap = [{
   }]
 },
 {
-    path: '/login',
-    component: () => import('@views/login/Login.vue'),
-    hidden: true
+  path: '/login',
+  component: () => import('@views/login/Login.vue'),
+  hidden: true
 },
 {
-    path: '/404',
-    component: () => import('@components/errors/404.vue'),
-    hidden: true
+  path: '/404',
+  component: () => import('@components/errors/404.vue'),
+  hidden: true
 }]
 
 export default new Router({
