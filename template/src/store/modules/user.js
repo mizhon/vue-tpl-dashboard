@@ -40,10 +40,7 @@ const user = {
     },
 
     // 获取用户信息
-    GetInfo({
-      commit,
-      state
-    }) {
+    GetInfo({ commit, state }) {
       return new Promise((resolve, reject) => {
         // 处理用户信息
         getInfo(state.token).then(res => {
