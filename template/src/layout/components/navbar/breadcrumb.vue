@@ -2,7 +2,7 @@
   <el-breadcrumb class="app-breadcrumb" aeparator="/">
     <transition-group name="breadcrumb">
       <el-breadcrumb-item v-for="(item, index) in levelList" :key="item.path">
-        <span v-if="item.redirect === 'noredirect' || index == levelList.length - 1" class="no-redirect">{{generateTitle(item.meta.title)}}</span>
+        <span v-if="item.redirect === 'noredirect' || index == levelList.length - 1" class="no-redirect">{{ generateTitle(item.meta.title) }}</span>
         <a v-else @click.prevent="handleLink(item)">{{ generateTitle(item.meta.title) }}</a>
       </el-breadcrumb-item>
     </transition-group>
@@ -11,6 +11,7 @@
 
 <script>
 import pathToRegexp from 'path-to-regexp'
+import generateTitle from '@utils/i18n'
 
 export default {
   data() {
@@ -37,15 +38,16 @@ export default {
       this.levelList = matched.filter(item => item.meta && item.meta.title && item.meta.breadcrumb !== false)
     },
     // 获取面包屑标题
-    generateTitle(title) {
-      const hasKey = this.$te('route.' + title)
-      if (hasKey) {
-        // $t :this method from vue-i18n, inject in @/lang/index.js
-        const translatedTitle = this.$t('route.' + title)
-        return translatedTitle
-      }
-      return title
-    },
+    generateTitle,
+    // generateTitle(title) {
+    //   const hasKey = this.$te('route.' + title)
+    //   if (hasKey) {
+    //     // $t :this method from vue-i18n, inject in @/lang/index.js
+    //     const translatedTitle = this.$t('route.' + title)
+    //     return translatedTitle
+    //   }
+    //   return title
+    // },
     pathCompile(path) {
       // To solve this problem https://github.com/PanJiaChen/vue-element-admin/issues/561
       const { params } = this.$route
