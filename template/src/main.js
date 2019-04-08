@@ -7,6 +7,15 @@ import Element from 'element-ui'
 
 import App from './App'
 import router from './router'
+import store from './store'
+
+// 权限控制
+import './permission'
+
+Vue.use(Element, {
+  // 设置 Element-UI的字体为 mini
+  size: Cookies.get('size') || 'mini'
+})
 
 Vue.config.productionTip = false
 
@@ -14,6 +23,8 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
+  // i18n,
   components: {
     App
   },
