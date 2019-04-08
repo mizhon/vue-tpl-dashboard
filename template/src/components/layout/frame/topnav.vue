@@ -42,11 +42,10 @@ export default {
     float: left;
     height: 60px;
     img {
-      padding: 15px 26px;
+      padding: 15px 30px;
     }
     .nav-toggler-icon {
       display: block;
-
     }
   }
   .navbar-items {
@@ -55,15 +54,17 @@ export default {
     text-align: center;
     .user-avatar {
       display: inline-block;
-      padding: 14px 26px;
+      padding: 14px 10px;
       vertical-align:middle;
+      cursor: pointer;
     }
     .logout {
       display: inline-block;
-      // color: #fff;
       line-height: 60px;
       vertical-align: middle;
-      padding-right: 30px;
+      padding-right: 20px;
+      font-size: 14px;
+      cursor: pointer;
     }
   }
 }

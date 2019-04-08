@@ -2,6 +2,9 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
 import Vue from 'vue'
+import Cookies from 'js-cookie'
+import Element from 'element-ui'
+
 import App from './App'
 import router from './router'
 
