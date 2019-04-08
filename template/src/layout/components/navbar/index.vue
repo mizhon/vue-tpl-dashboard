@@ -11,7 +11,8 @@
         <!-- <search id="header-search" class="right-menu-item" /> -->
 
         <!-- 设置字体大小 -->
-        <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom">
+        <!-- <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom"> -->
+        <el-tooltip :content="'navbar.size'" effect="dark" placement="bottom">
           <size-select id="size-select" class="right-menu-item hover-effect"></size-select>
         </el-tooltip>
       </template>
@@ -24,12 +25,14 @@
         <el-dropdown-menu slot="dropdown">
           <router-link to="/">
             <el-dropdown-item>
-              {{ $t('navbar.dashboard') }}
+              <!-- {{ $t('navbar.dashboard') }} -->
+              {{ 'navbar.dashboard' }}
             </el-dropdown-item>
           </router-link>
           <el-dropdown-item divided>
             <span style="display:block;" @click="logout">
-              {{ $t('navbar.logOut') }}
+              <!-- {{ $t('navbar.logOut') }} -->
+              {{ 'navbar.logOut' }}
             </span>
           </el-dropdown-item>
         </el-dropdown-menu>

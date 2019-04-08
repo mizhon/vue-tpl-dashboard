@@ -9,7 +9,7 @@
 
 <script>
 import pathToRegexp from 'path-to-regexp'
-import { generateTitle } from '@utils/i18n'
+// import { generateTitle } from '@utils/i18n'
 
 export default {
   data() {
@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     // 获取面包屑标题
-    generateTitle,
+    // generateTitle,
     // generateTitle(title) {
     //   const hasKey = this.$te('route.' + title)
     //   if (hasKey) {
