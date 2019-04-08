@@ -1,9 +1,9 @@
 <template>
   <div class="navbar">
     <!-- 侧边栏伸缩按钮 -->
-    <hamburger id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
+    <hamburger id="hamburger-container" :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar"></hamburger>
     <!-- 面包屑 -->
-    <breadcrumb id="breadcrumb-container" class="breadcrumb-container" />
+    <breadcrumb id="breadcrumb-container" class="breadcrumb-container"></breadcrumb>
     <!-- 顶部导航栏右侧菜单 -->
     <div class="right-menu">
       <template v-if="device !== 'mobile'">
@@ -12,7 +12,7 @@
 
         <!-- 设置字体大小 -->
         <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom">
-          <size-select id="size-select" class="right-menu-item hover-effect" />
+          <size-select id="size-select" class="right-menu-item hover-effect"></size-select>
         </el-tooltip>
       </template>
 
@@ -28,7 +28,9 @@
             </el-dropdown-item>
           </router-link>
           <el-dropdown-item divided>
-            <span style="display:block;" @click="logout">{{ $t('navbar.logOut') }}</span>
+            <span style="display:block;" @click="logout">
+              {{ $t('navbar.logOut') }}
+            </span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
