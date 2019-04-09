@@ -99,10 +99,12 @@ const actions = {
       commit('SET_TOKEN', token)
       setToken(token)
 
-      const { roles } = await dispatch('getInfo')
+      // const { roles } = await dispatch('getInfo')
+      const { roles } = dispatch('getInfo')
       resetRouter()
       // generate accessible routes map based on roles
-      const accessRoutes = await dispatch('permission/generateRoutes', roles, { root: true })
+      // const accessRoutes = await dispatch('permission/generateRoutes', roles, { root: true })
+      const accessRoutes = dispatch('permission/generateRoutes', roles, { root: true })
       // dynamically add accessible routes
       router.addRoutes(accessRoutes)
       resolve()
