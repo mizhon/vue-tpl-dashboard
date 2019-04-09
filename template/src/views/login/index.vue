@@ -5,9 +5,9 @@
         <h3>{{ loginTitle }}</h3>
       </div>
       <el-form-item prop="username">
-        <span class="svg-container">
-          <!-- <svg-icon icon-class="user" /> -->
-        </span>
+        <!-- <span class="svg-container">
+          <svg-icon icon-class="user" />
+        </span> -->
         <el-input
           v-model="loginForm.username"
           name="username"
@@ -17,9 +17,9 @@
         </el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <span class="svg-container">
-          <!-- <svg-icon icon-class="password" /> -->
-        </span>
+        <!-- <span class="svg-container">
+          <svg-icon icon-class="password" />
+        </span> -->
         <el-input
           v-model="loginForm.password"
           name="password"
@@ -28,12 +28,12 @@
           placeholder="密码"
           @keyup.enter.native="handleLogin">
         </el-input>
-        <span class="show-pwd" @click="showPwd">
-          <!-- <svg-icon :icon-class="pwdType === 'password' ? 'eye' : 'eye-open'" /> -->
-        </span>
+        <!-- <span class="show-pwd" @click="showPwd">
+          <svg-icon :icon-class="pwdType === 'password' ? 'eye' : 'eye-open'" />
+        </span> -->
       </el-form-item>
       <el-form-item>
-        <el-button :loading="loading" type="primary" style="width:100%; margin-bottom:30px;" @click.native.prevent="handleLogin">
+        <el-button :loading="loading" type="primary" style="width:100%;" @click.native.prevent="handleLogin">
           登录
         </el-button>
       </el-form-item>

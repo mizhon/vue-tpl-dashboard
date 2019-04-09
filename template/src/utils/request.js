@@ -4,7 +4,7 @@ import { getToken } from '@utils/auth'
 import { MessageBox, Message } from 'element-ui'
 
 // create an axios request instance
-const request = axios.create({
+const service = axios.create({
   // 根据实际情况配置
   baseURL: process.env.baseURL,
   withCredentials: true, // 跨域请求时发送 cookies
@@ -27,15 +27,15 @@ service.interceptors.request.use(
 )
 
 service.interceptors.request.use(
-  res => {
-    const res = res.data
-    if(res.code !== 200) {
+  response => {
+    const res = response.data
+    if(res.code !== 20000) {
       Message({
         message: res.message,
         type: 'ERROR',
         duration: 3000
       })
-      if(res.code > 500) {
+      if (res.code === 50008 || res.code === 50012 || res.code === 50014) {
         MessageBox.confirm('服务端错误', '确认', {
           confirmButtonText: '重试',
           cancelButtonText: '取消',
@@ -52,8 +52,8 @@ service.interceptors.request.use(
     }
   },
 
-  err => {
-    console.error('Error: ' + err)
+  error => {
+    console.error('Error: ' + error)
     Message({
       message: error.message,
       type: 'error',
@@ -63,3 +63,5 @@ service.interceptors.request.use(
     return Promise.reject(err)
   }
 )
+
+export default service
