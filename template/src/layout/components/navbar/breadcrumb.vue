@@ -1,7 +1,7 @@
 <template>
   <el-breadcrumb class="app-breadcrumb" aeparator="/">
     <transition-group name="breadcrumb">
-      <el-breadcrumb-item v-for="(item, index) in levelList" :key="item.path">
+      <el-breadcrumb-item v-for="(item) in levelList" :key="item.path">
       </el-breadcrumb-item>
     </transition-group>
   </el-breadcrumb>
@@ -41,7 +41,10 @@ export default {
       let matched = this.$route.matched.filter(item => item.name)
       const first = matched[0]
       if (first && first.name.trim().toLocaleLowerCase() !== 'Dashboard'.toLocaleLowerCase()) {
-        matched = [{ path: '/dashboard', meta: { title: 'dashboard' }}].concat(matched)
+        matched = [{
+          path: '/dashboard',
+          meta: { title: 'dashboard' }
+        }].concat(matched)
       }
 
       this.levelList = matched.filter(item => item.meta && item.meta.title && item.meta.breadcrumb !== false)

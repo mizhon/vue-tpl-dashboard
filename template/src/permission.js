@@ -40,7 +40,7 @@ router.beforeEach((to, from, next) => {
         } catch (err) {
           // remove token and go to login page to re-login
           await store.dispatch('user/resetToken')
-          Message.error(error || 'Has Error')
+          Message.error(err || 'Has Error')
           // NOTE: 可以改造为跳转到 SSO 验证方式
           next(`/login?redirect=${to.path}`)
           NProgress.done()
