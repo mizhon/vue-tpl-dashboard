@@ -50,13 +50,15 @@ const actions = {
         const { data } = response
 
         if (!data) {
-          reject('Verification failed, please Login again.')
+          // reject('Verification failed, please Login again.')
+          Promise.reject(new Error('Verification failed, please Login again.'))
         }
         const { roles, name, avatar, introduction } = data
 
         // roles must be a non-empty array
         if (!roles || roles.length <= 0) {
-          reject('getInfo: roles must be a non-null array!')
+          // reject('getInfo: roles must be a non-null array!')
+          Promise.reject(new Error('getInfo: roles must be a non-null array!'))
         }
 
         commit('SET_ROLES', roles)

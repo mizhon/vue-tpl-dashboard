@@ -23,7 +23,7 @@ export default {
     }
   },
   created() {
-    getBreadcrumb()
+    this.getBreadcrumb()
   },
   methods: {
     // 获取面包屑标题

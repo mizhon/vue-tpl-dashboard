@@ -43,7 +43,8 @@ module.exports = {
     cssSourceMap: true,
 
     // SSO 登录地址配置
-    ssoURL: ''
+    ssoURL: '',
+    baseURL: ''
   },
 
   build: {
@@ -77,6 +78,7 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report,
 
     // SSO 登录地址配置
-    ssoURL: ''
+    ssoURL: '',
+    baseURL: ''
   }
 }
