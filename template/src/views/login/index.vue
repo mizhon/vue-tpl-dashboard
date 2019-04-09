@@ -1,55 +1,65 @@
 <template>
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
-      <h3 class="title">vue-admin-template</h3>
+      <div class="title-container">
+        <h3>{{ loginTitle }}</h3>
+      </div>
       <el-form-item prop="username">
         <span class="svg-container">
-          <svg-icon icon-class="user" />
+          <!-- <svg-icon icon-class="user" /> -->
         </span>
-        <el-input v-model="loginForm.username" name="username" type="text" auto-complete="on" placeholder="username" />
+        <el-input
+          v-model="loginForm.username"
+          name="username"
+          type="text"
+          auto-complete="on"
+          placeholder="账号">
+        </el-input>
       </el-form-item>
       <el-form-item prop="password">
         <span class="svg-container">
-          <svg-icon icon-class="password" />
+          <!-- <svg-icon icon-class="password" /> -->
         </span>
         <el-input
-          :type="pwdType"
           v-model="loginForm.password"
           name="password"
+          type="password"
           auto-complete="on"
-          placeholder="password"
-          @keyup.enter.native="handleLogin" />
+          placeholder="密码"
+          @keyup.enter.native="handleLogin">
+        </el-input>
         <span class="show-pwd" @click="showPwd">
-          <svg-icon :icon-class="pwdType === 'password' ? 'eye' : 'eye-open'" />
+          <!-- <svg-icon :icon-class="pwdType === 'password' ? 'eye' : 'eye-open'" /> -->
         </span>
       </el-form-item>
       <el-form-item>
-        <el-button :loading="loading" type="primary" style="width:100%;" @click.native.prevent="handleLogin">
-          Sign in
+        <el-button :loading="loading" type="primary" style="width:100%; margin-bottom:30px;" @click.native.prevent="handleLogin">
+          登录
         </el-button>
       </el-form-item>
+
       <div class="tips">
-        <span style="margin-right:20px;">username: admin</span>
-        <span> password: admin</span>
+        <span>账号: admin</span>
+        <span>密码: 随便填</span>
       </div>
     </el-form>
   </div>
 </template>
 
 <script>
-import { isvalidUsername } from '@utils/validate'
+import { validUsername } from '@utils/validate'
 
 export default {
   name: 'Login',
   data() {
     const validateUsername = (rule, value, callback) => {
-      if (!isvalidUsername(value)) {
+      if (!validUsername(value)) {
         callback(new Error('请输入正确的用户名'))
       } else {
         callback()
       }
     }
-    const validatePass = (rule, value, callback) => {
+    const validatePassword = (rule, value, callback) => {
       if (value.length < 5) {
         callback(new Error('密码不能小于5位'))
       } else {
@@ -57,13 +67,22 @@ export default {
       }
     }
     return {
+      loginTitle: '系统登录',
       loginForm: {
         username: 'admin',
         password: 'admin'
       },
       loginRules: {
-        username: [{ required: true, trigger: 'blur', validator: validateUsername }],
-        password: [{ required: true, trigger: 'blur', validator: validatePass }]
+        username: [{
+          required: true,
+          trigger: 'blur',
+          validator: validateUsername
+        }],
+        password: [{
+          required: true,
+          trigger: 'blur',
+          validator: validatePassword
+        }]
       },
       loading: false,
       pwdType: 'password',
@@ -85,19 +104,22 @@ export default {
       } else {
         this.pwdType = 'password'
       }
+      this.$nextTick(() => {
+        this.$refs.password.focus()
+      })
     },
     handleLogin() {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true
-          this.$store.dispatch('Login', this.loginForm).then(() => {
+          this.$store.dispatch('user/login', this.loginForm).then(() => {
             this.loading = false
             this.$router.push({ path: this.redirect || '/' })
           }).catch(() => {
             this.loading = false
           })
         } else {
-          console.log('error submit!!')
+          console.log('数据提交错误!!')
           return false
         }
       })
@@ -122,7 +144,7 @@ $light_gray:#eee;
       -webkit-appearance: none;
       border-radius: 0px;
       padding: 12px 5px 12px 15px;
-      color: $light_gray;
+      color: #eee;
       height: 47px;
       &:-webkit-autofill {
         -webkit-box-shadow: 0 0 0px 1000px $bg inset !important;
