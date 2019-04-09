@@ -35,6 +35,7 @@ module.exports = {
     'quotes': 'off',
     'semi': 'off',
     'no-trailing-spaces': 'off',
+    'no-useless-escape': 'off',
     'no-extra-parens': 'off',
     'padded-blocks': 'off',
     'no-multiple-empty-lines': 'off',
