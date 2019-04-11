@@ -44,7 +44,7 @@ module.exports = {
 
     // SSO 登录地址配置
     ssoURL: '',
-    baseURL: ''
+    baseURL: '/dev-api'
   },
 
   build: {
@@ -79,6 +79,6 @@ module.exports = {
 
     // SSO 登录地址配置
     ssoURL: '',
-    baseURL: ''
+    baseURL: '/prod-api'
   }
 }
