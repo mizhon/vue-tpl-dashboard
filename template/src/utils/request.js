@@ -29,6 +29,7 @@ service.interceptors.request.use(
 
 service.interceptors.request.use(
   response => {
+    console.log(response)
     const res = response.data
     if (res.code !== 20000) {
       Message({

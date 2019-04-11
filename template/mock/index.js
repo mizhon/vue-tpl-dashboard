@@ -1,4 +1,5 @@
 import Mock from 'mockjs'
+import mocks from './mocks'
 
 const MOCK_API_BASE = '/mock'
 
@@ -7,10 +8,10 @@ export function mockXHR() {
   // https://github.com/nuysoft/Mock/issues/300
   Mock.XHR.prototype.proxy_send = Mock.XHR.prototype.send
   Mock.XHR.prototype.send = function() {
-    if(this.custom.xhr) {
+    if (this.custom.xhr) {
       this.custom.xhr.withCredentials = this.withCredentials || false
 
-      if(this.responseType){
+      if (this.responseType) {
         this.custom.xhr.responseType = this.responseType
       }
     }
