@@ -6,7 +6,7 @@ import { MessageBox, Message } from 'element-ui'
 // create an axios request instance
 const service = axios.create({
   // 根据实际情况配置
-  baseURL: process.env.baseURL,
+  baseURL: process.env.BASE_URL,
   withCredentials: true, // 跨域请求时发送 cookies
   timeout: 5000 // request timeout
 })
@@ -18,6 +18,7 @@ service.interceptors.request.use(
       // 让每个请求携带token-- ['X-Token']为自定义key 请根据实际情况自行修改
       config.headers['X-Token'] = getToken()
     }
+    console.log('[<<< Request.js config settings: >>>]', config)
     return config
   },
   err => {
@@ -42,6 +43,7 @@ service.interceptors.request.use(
           type: 'warning'
         }).then(() => {
           store.dispatch('user/resetToken').then(() => {
+            // 重新实例化vue-router对象, 避免bug
             location.reload()
           })
         })
