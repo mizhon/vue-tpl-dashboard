@@ -40,11 +40,7 @@ module.exports = {
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
 
-    cssSourceMap: true,
-
-    // SSO 登录地址配置
-    ssoURL: '',
-    baseURL: '/dev-api'
+    cssSourceMap: true
   },
 
   build: {
@@ -75,10 +71,6 @@ module.exports = {
     // View the bundle analyzer report after build finishes:
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
-    bundleAnalyzerReport: process.env.npm_config_report,
-
-    // SSO 登录地址配置
-    ssoURL: '',
-    baseURL: '/prod-api'
+    bundleAnalyzerReport: process.env.npm_config_report
   }
 }
