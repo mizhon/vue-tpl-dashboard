@@ -30,6 +30,7 @@ export default [
     response: config => {
       const { username } = config.body
       const token = tokens[username]
+      console.log('mock response: ', config)
 
       // mock error
       if (!token) {
