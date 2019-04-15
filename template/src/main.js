@@ -19,8 +19,8 @@ if (process.env.NODE_ENV === 'development') {
   mockXHR()
 }
 
+// 设置 Element-UI的字体为 mini
 Vue.use(Element, {
-  // 设置 Element-UI的字体为 mini
   size: Cookies.get('size') || 'mini'
 })
 
@@ -31,7 +31,6 @@ new Vue({
   el: '#app',
   router,
   store,
-  // i18n,
   components: {
     App
   },
