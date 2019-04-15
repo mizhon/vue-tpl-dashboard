@@ -1,9 +1,13 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-
 import Vue from 'vue'
 import Cookies from 'js-cookie'
 import Element from 'element-ui'
+
+// A modern alternative to CSS resets
+import 'normalize.css/normalize.css'
+// 应用全局样式
+import '@assets/styles/index.scss'
 
 import App from './App'
 import router from './router'
