@@ -11,6 +11,13 @@ import store from './store'
 
 // 权限控制
 import './permission'
+// mock数据
+import { mockXHR } from '../mock'
+// 在 development 环境中使用 mock API
+if (process.env.NODE_ENV === 'development') {
+  console.log('Current Environment: ', process.env.NODE_ENV)
+  mockXHR()
+}
 
 Vue.use(Element, {
   // 设置 Element-UI的字体为 mini
