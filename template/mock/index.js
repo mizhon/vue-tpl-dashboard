@@ -21,7 +21,7 @@ export function mockXHR() {
   function XHR2ExpressReqWrap(respond) {
     return function(options) {
       let result = null
-      if(respond instanceof Function) {
+      if (respond instanceof Function) {
         const { body, type, url } = options
         // https://expressjs.com/en/4x/api.html#req
         result = respond({
@@ -36,7 +36,7 @@ export function mockXHR() {
     }
   }
 
-  for(const i of mocks) {
+  for (const i of mocks) {
     Mock.mock(new RegExp(i.url), i.type || 'get', XHR2ExpressReqWrap(i.response))
   }
 }
