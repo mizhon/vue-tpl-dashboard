@@ -1,7 +1,5 @@
 <template>
-  <span class="icon">
-    <i :class="iconClass"></i>
-  </span>
+  <i :class="iconClass" :style=""></i>
 </template>
 
 <script>
@@ -17,6 +15,9 @@ export default {
     iconName() {
       return `${this.iconClass}`
     }
+  },
+  methods: {
+
   }
 }
 </script>

@@ -2,6 +2,7 @@
   <el-breadcrumb class="app-breadcrumb" aeparator="/">
     <transition-group name="breadcrumb">
       <el-breadcrumb-item v-for="(item) in levelList" :key="item.path">
+        \{{ item.meta.title }}
       </el-breadcrumb-item>
     </transition-group>
   </el-breadcrumb>
@@ -9,7 +10,6 @@
 
 <script>
 import pathToRegexp from 'path-to-regexp'
-// import { generateTitle } from '@utils/i18n'
 
 export default {
   data() {
