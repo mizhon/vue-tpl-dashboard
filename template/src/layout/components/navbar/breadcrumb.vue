@@ -1,6 +1,6 @@
 <template>
   <el-breadcrumb class="app-breadcrumb" aeparator="/">
-    <transition-group name="breadcrumb">
+    <transition-group name="breadcrumb" style="line-height: 50px;">
       <el-breadcrumb-item v-for="(item) in levelList" :key="item.path">
         \{{ item.meta.title }}
       </el-breadcrumb-item>

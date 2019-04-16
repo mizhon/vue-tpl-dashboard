@@ -108,8 +108,8 @@
       .el-tooltip {
         padding: 0 !important;
 
-        .icon {
-          margin-left: 20px;
+        i {
+          margin-left: 13px;
         }
       }
     }
@@ -139,6 +139,9 @@
             overflow: hidden;
             visibility: hidden;
             display: inline-block;
+          }
+          &>i{
+            margin-left: 13px;
           }
         }
       }
