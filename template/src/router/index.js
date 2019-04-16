@@ -43,7 +43,7 @@ export const constantRoutes = [
         name: 'Dashboard',
         meta: {
           title: '首页',
-          icon: 'dashboard',
+          icon: 'el-icon-news', // 'dashboard',
           noCache: true,
           affix: true
         }
@@ -66,27 +66,27 @@ export const asyncRoutes = [
       title: 'permission',
       icon: 'lock',
       roles: ['admin', 'editor'] // you can set roles in root nav
-    }
-    // children: [
-    //   {
-    //     path: 'page',
-    //     component: () => import('@/views/permission/page'),
-    //     name: 'PagePermission',
-    //     meta: {
-    //       title: 'pagePermission',
-    //       roles: ['admin'] // or you can only set roles in sub nav
-    //     }
-    //   },
-    //   {
-    //     path: 'role',
-    //     component: () => import('@/views/permission/role'),
-    //     name: 'RolePermission',
-    //     meta: {
-    //       title: 'rolePermission',
-    //       roles: ['admin']
-    //     }
-    //   }
-    // ]
+    },
+    children: [
+      {
+        path: 'page',
+        component: () => import('@/views/permission/page'),
+        name: 'PagePermission',
+        meta: {
+          title: 'pagePermission',
+          roles: ['admin'] // or you can only set roles in sub nav
+        }
+      },
+      {
+        path: 'role',
+        component: () => import('@/views/permission/role'),
+        name: 'RolePermission',
+        meta: {
+          title: 'rolePermission',
+          roles: ['admin']
+        }
+      }
+    ]
   }
 ]
 
