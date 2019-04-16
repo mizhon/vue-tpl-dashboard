@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Icon from '@/layout/components/icon'
+import Icon from './icon.vue'
 
 // register globally
 Vue.component('icon', Icon)
