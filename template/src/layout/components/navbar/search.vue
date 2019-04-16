@@ -77,9 +77,9 @@ export default {
       this.$router.push(val.path)
       this.search = ''
       this.options = []
-      this.$nextTick(() => {
-        this.show = false
-      })
+      // this.$nextTick(() => {
+      //   this.show = false
+      // })
     },
     initFuse(list) {
       this.fuse = new Fuse(list, {
