@@ -12,13 +12,13 @@ const users = {
     roles: ['admin'],
     introduction: '角色 - administrator',
     avatar: require('./images/gitlab.png'),
-    name: 'Super Admin'
+    name: '管理员'
   },
   'editor-token': {
     roles: ['editor'],
     introduction: '角色 - editor',
     avatar: require('./images/gitlab.png'),
-    name: 'Normal Editor'
+    name: '普通用户'
   }
 }
 
