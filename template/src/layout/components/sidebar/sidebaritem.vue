@@ -100,6 +100,7 @@ export default {
   display: block;
   i {
     padding-right:8px;
+    color: rgb(191, 203, 217);
   }
 }
 </style>
