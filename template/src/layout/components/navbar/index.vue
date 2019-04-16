@@ -8,7 +8,7 @@
     <div class="right-menu">
       <template v-if="device !== 'mobile'">
         <!-- 搜索栏 -->
-        <!-- <search id="header-search" class="right-menu-item" /> -->
+        <search id="header-search" class="right-menu-item" />
 
         <!-- 设置字体大小 -->
         <!-- <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom"> -->
@@ -25,12 +25,12 @@
         <el-dropdown-menu slot="dropdown">
           <router-link to="/">
             <el-dropdown-item>
-              {{ 'navbar.dashboard' }}
+              {{ page }}
             </el-dropdown-item>
           </router-link>
           <el-dropdown-item divided>
             <span style="display:block;" @click="logout">
-              {{ 'navbar.logOut' }}
+              {{ signOff }}
             </span>
           </el-dropdown-item>
         </el-dropdown-menu>
@@ -43,15 +43,21 @@
 import { mapGetters } from 'vuex'
 import Hamburger from './hamburger'
 import Breadcrumb from './breadcrumb'
-// import Search from './search'
+import Search from './search'
 import SizeSelect from './sizeselect'
 
 export default {
   components: {
     Hamburger,
     Breadcrumb,
-    // Search,
+    Search,
     SizeSelect
+  },
+  data() {
+    return {
+      page: '首页',
+      signOff: '退出登录'
+    }
   },
   computed: {
     ...mapGetters([
