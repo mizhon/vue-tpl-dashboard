@@ -71,6 +71,9 @@
       &:hover {
         background-color: $menuHover !important;
       }
+      span {
+        padding-left: 10px;
+      }
     }
 
     .is-active>.el-submenu__title {
@@ -109,7 +112,7 @@
         padding: 0 !important;
 
         i {
-          margin-left: 13px;
+          margin-left: 19px;
         }
       }
     }
@@ -141,7 +144,7 @@
             display: inline-block;
           }
           &>i{
-            margin-left: 13px;
+            margin-left: 19px;
           }
         }
       }

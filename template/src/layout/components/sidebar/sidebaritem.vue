@@ -15,7 +15,7 @@
       <template slot="title">
         <div class="sidebar-item-container">
           <item v-if="item.meta" :icon="item.meta && item.meta.icon" :title="item.meta.title"></item>
-        </div>  
+        </div>
       </template>
       <sidebar-item
         v-for="child in item.children"
@@ -98,8 +98,8 @@ export default {
 <style lang="scss">
 .sidebar-item-container {
   display: block;
-  i {
-    padding-right:8px;
+  span {
+    padding-left: 8px;
     color: rgb(191, 203, 217);
   }
 }
