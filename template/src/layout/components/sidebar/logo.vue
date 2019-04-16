@@ -26,7 +26,7 @@ export default {
     return {
       title: 'Vue Element Admin',
       // logo: 'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
-      logo: '../../../assets/imgs/logo.png'
+      logo: require('../../../assets/imgs/logo.png')
     }
   }
 }
