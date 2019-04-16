@@ -15,7 +15,7 @@
 
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
         <div class="avatar-wrapper">
-          <div>\{{ name }}</div>
+          <div class="user-name">\{{ name }}</div>
           <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
           <i class="el-icon-caret-bottom" />
         </div>
@@ -135,6 +135,12 @@ export default {
         position: relative;
         margin-top: 5px;
 
+        .user-name {
+          display: inline-block;
+          line-height: 40px;
+          font-size: 14px;
+          vertical-align: middle;
+        }
         .user-avatar {
           cursor: pointer;
           width: 40px;
