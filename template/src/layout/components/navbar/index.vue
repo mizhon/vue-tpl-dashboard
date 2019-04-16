@@ -14,7 +14,7 @@
 
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
         <div class="avatar-wrapper">
-          <span>123 - {{ getUserName() }}</span>
+          <span>\{{ name }}</span>
           <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
           <i class="el-icon-caret-bottom" />
         </div>
@@ -64,9 +64,6 @@ export default {
     ])
   },
   methods: {
-    getUserName() {
-      return this.$store.state.user.name
-    },
     toggleSideBar() {
       this.$store.dispatch('app/toggleSideBar')
     },
