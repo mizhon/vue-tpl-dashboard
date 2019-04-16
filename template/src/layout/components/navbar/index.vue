@@ -8,13 +8,8 @@
     <div class="right-menu">
       <template v-if="device !== 'mobile'">
         <!-- 搜索栏 -->
-        <search id="header-search" class="right-menu-item" />
-
-        <!-- 设置字体大小 -->
-        <!-- <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom"> -->
-        <!-- <el-tooltip :content="'navbar.size'" effect="dark" placement="bottom">
-          <size-select id="size-select" class="right-menu-item hover-effect"></size-select>
-        </el-tooltip> -->
+        <search id="header-search" class="right-menu-item"></search>
+        <screenfull id="screenfull" class="right-menu-item hover-effect"></screenfull>
       </template>
 
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
@@ -44,14 +39,14 @@ import { mapGetters } from 'vuex'
 import Hamburger from './hamburger'
 import Breadcrumb from './breadcrumb'
 import Search from './search'
-import SizeSelect from './sizeselect'
+import ScreenFull from './screenfull'
 
 export default {
   components: {
     Hamburger,
     Breadcrumb,
     Search,
-    SizeSelect
+    ScreenFull
   },
   data() {
     return {

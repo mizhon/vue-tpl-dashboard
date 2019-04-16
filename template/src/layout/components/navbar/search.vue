@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'show':show}" class="header-search">
+  <div :class="{ 'show': show }" class="header-search">
     <icon class-name="search-icon" icon-class="search" />
     <el-select
       ref="headerSearchSelect"
@@ -8,7 +8,7 @@
       filterable
       default-first-option
       remote
-      placeholder="Search"
+      :placeholder="searchText"
       class="header-search-select"
       @change="change"
     >
@@ -30,6 +30,7 @@ export default {
   data() {
     return {
       search: '',
+      searchText: '搜索页面',
       options: [],
       searchPool: [],
       show: true,
