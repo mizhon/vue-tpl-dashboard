@@ -43,7 +43,7 @@ export const constantRoutes = [
         name: 'Dashboard',
         meta: {
           title: '首页',
-          icon: 'el-icon-news', // 'dashboard',
+          icon: 'iconfont icon-shouye', // 'dashboard',
           noCache: true,
           affix: true
         }
@@ -64,7 +64,7 @@ export const asyncRoutes = [
     alwaysShow: true, // will always show the root menu
     meta: {
       title: 'permission',
-      icon: 'el-icon-news',
+      icon: 'iconfont icon-ic_opt_feature',
       roles: ['admin', 'editor'] // you can set roles in root nav
     },
     children: [
