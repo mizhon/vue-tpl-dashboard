@@ -4,6 +4,7 @@ import Vue from 'vue'
 import Cookies from 'js-cookie'
 import Element from 'element-ui'
 
+import '@assets/styles/element-variables.scss'
 // A modern alternative to CSS resets
 import 'normalize.css/normalize.css'
 // 应用全局样式
