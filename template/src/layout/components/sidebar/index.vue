@@ -11,7 +11,7 @@
         :active-text-color="variables.menuActiveText"
         :collapse-transition="false"
         mode="vertical">
-        <sidebar-item v-for="route in permissionRoutes" :key="route.path" :item="route" :base-path="route.path"></sidebar-item>
+        <sidebar-item v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path"></sidebar-item>
       </el-menu>
     </el-scrollbar>
   </div>
@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'permissionRoutes',
+      'permission_routes',
       'sidebar'
     ]),
     showLogo() {
