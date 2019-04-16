@@ -64,7 +64,7 @@ export const asyncRoutes = [
     alwaysShow: true, // will always show the root menu
     meta: {
       title: 'permission',
-      icon: 'lock',
+      icon: 'el-icon-news',
       roles: ['admin', 'editor'] // you can set roles in root nav
     },
     children: [
