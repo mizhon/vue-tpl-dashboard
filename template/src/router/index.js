@@ -73,7 +73,7 @@ export const asyncRoutes = [
         component: () => import('@/views/permission/page'),
         name: 'PagePermission',
         meta: {
-          title: 'pagePermission',
+          title: '权限测试1',
           roles: ['admin'] // or you can only set roles in sub nav
         }
       },
@@ -82,7 +82,7 @@ export const asyncRoutes = [
         component: () => import('@/views/permission/role'),
         name: 'RolePermission',
         meta: {
-          title: 'rolePermission',
+          title: '权限测试2',
           roles: ['admin']
         }
       }
