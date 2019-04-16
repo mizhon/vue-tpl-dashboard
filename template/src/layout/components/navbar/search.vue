@@ -22,7 +22,7 @@
 // make search results more in line with expectations
 import Fuse from 'fuse.js'
 import path from 'path'
-import Icon from '../icon/index'
+import Icon from '../icon/icon'
 
 export default {
   name: 'HeaderSearch',
