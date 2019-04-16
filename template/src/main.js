@@ -13,8 +13,8 @@ import '@assets/styles/index.scss'
 import App from './App'
 import router from './router'
 import store from './store'
-// 引入 icons
-import './icons'
+// 引入全局注册的 icon 组件
+import './layout/components/icon'
 // 权限控制
 import './permission'
 // mock数据

@@ -1,6 +1,6 @@
 <template>
   <div :class="{'show':show}" class="header-search">
-    <svg-icon class-name="search-icon" icon-class="search" />
+    <icon class-name="search-icon" icon-class="search" />
     <el-select
       ref="headerSearchSelect"
       v-model="search"
@@ -22,11 +22,11 @@
 // make search results more in line with expectations
 import Fuse from 'fuse.js'
 import path from 'path'
-import svgIcon from '../svgicon/index'
+import Icon from '../icon/index'
 
 export default {
   name: 'HeaderSearch',
-  components: { svgIcon },
+  components: { Icon },
   data() {
     return {
       search: '',
