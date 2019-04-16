@@ -1,6 +1,6 @@
 <template>
   <div :class="{ 'show': show }" class="header-search">
-    <icon class-name="search-icon" icon-class="icon-search" />
+    <icon :icon-class="iconClass"/>
     <el-select
       ref="headerSearchSelect"
       v-model="search"
@@ -31,6 +31,7 @@ export default {
     return {
       search: '',
       searchText: '搜索页面',
+      iconClass: 'iconfont icon-search',
       options: [],
       searchPool: [],
       show: true,
