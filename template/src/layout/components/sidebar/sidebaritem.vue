@@ -4,18 +4,14 @@
     <template v-if="hasOneShowingChild(item.children,item) && (!onlyOneChild.children||onlyOneChild.noShowingChildren) && !item.alwaysShow">
       <app-link v-if="onlyOneChild.meta" :to="resolvePath(onlyOneChild.path)">
         <el-menu-item :index="resolvePath(onlyOneChild.path)" :class="{'submenu-title-noDropdown':!isNest}">
-          <div class="sidebar-item-container">
-            <item :icon="onlyOneChild.meta.icon||(item.meta && item.meta.icon)" :title="onlyOneChild.meta.title"></item>
-          </div>
+          <item :icon="onlyOneChild.meta.icon||(item.meta && item.meta.icon)" :title="onlyOneChild.meta.title"></item>
         </el-menu-item>
       </app-link>
     </template>
     <!-- 如果包含子路由，则递归渲染子路由 -->
     <el-submenu v-else ref="subMenu" :index="resolvePath(item.path)" popper-append-to-body>
       <template slot="title">
-        <div class="sidebar-item-container">
-          <item v-if="item.meta" :icon="item.meta && item.meta.icon" :title="item.meta.title"></item>
-        </div>
+        <item v-if="item.meta" :icon="item.meta && item.meta.icon" :title="item.meta.title"></item>
       </template>
       <sidebar-item
         v-for="child in item.children"
