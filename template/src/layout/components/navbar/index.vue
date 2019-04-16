@@ -20,12 +20,12 @@
         <el-dropdown-menu slot="dropdown">
           <router-link to="/">
             <el-dropdown-item>
-              {{ page }}
+              \{{ page }}
             </el-dropdown-item>
           </router-link>
           <el-dropdown-item divided>
             <span style="display:block;" @click="logout">
-              {{ signOff }}
+              \{{ signOff }}
             </span>
           </el-dropdown-item>
         </el-dropdown-menu>

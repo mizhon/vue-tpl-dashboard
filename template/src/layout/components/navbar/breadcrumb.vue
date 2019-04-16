@@ -43,7 +43,7 @@ export default {
       if (first && first.name.trim().toLocaleLowerCase() !== 'Dashboard'.toLocaleLowerCase()) {
         matched = [{
           path: '/dashboard',
-          meta: { title: 'dashboard' }
+          meta: { title: '首页' }
         }].concat(matched)
       }
 
