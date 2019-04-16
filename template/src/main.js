@@ -12,7 +12,8 @@ import '@assets/styles/index.scss'
 import App from './App'
 import router from './router'
 import store from './store'
-
+// 引入 icons
+import './icons'
 // 权限控制
 import './permission'
 // mock数据

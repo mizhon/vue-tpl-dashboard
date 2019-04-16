@@ -12,9 +12,9 @@
 
         <!-- 设置字体大小 -->
         <!-- <el-tooltip :content="$t('navbar.size')" effect="dark" placement="bottom"> -->
-        <el-tooltip :content="'navbar.size'" effect="dark" placement="bottom">
+        <!-- <el-tooltip :content="'navbar.size'" effect="dark" placement="bottom">
           <size-select id="size-select" class="right-menu-item hover-effect"></size-select>
-        </el-tooltip>
+        </el-tooltip> -->
       </template>
 
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
@@ -41,14 +41,14 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Hanmburger from './hamburger'
+import Hamburger from './hamburger'
 import Breadcrumb from './breadcrumb'
 // import Search from './search'
 import SizeSelect from './sizeselect'
 
 export default {
   components: {
-    Hanmburger,
+    Hamburger,
     Breadcrumb,
     // Search,
     SizeSelect
