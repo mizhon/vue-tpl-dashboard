@@ -145,8 +145,8 @@ export default {
         }
         .user-avatar {
           cursor: pointer;
-          width: 35px;
-          height: 35px;
+          width: 32px;
+          height: 32px;
           border-radius: 10px;
         }
 

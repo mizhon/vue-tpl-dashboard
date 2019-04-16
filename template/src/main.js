@@ -9,6 +9,8 @@ import '@assets/styles/element-variables.scss'
 import 'normalize.css/normalize.css'
 // 应用全局样式
 import '@assets/styles/index.scss'
+// 引入 iconfonts 样式
+import '@assets/fonts/iconfont.css'
 
 import App from './App'
 import router from './router'
