@@ -9,12 +9,13 @@
       <template v-if="device !== 'mobile'">
         <!-- 搜索栏 -->
         <search id="header-search" class="right-menu-item"></search>
-        <screenfull id="screenfull" class="right-menu-item hover-effect"></screenfull>
+        <!-- 全屏设置 -->
+        <!-- <screenfull id="screenfull" class="right-menu-item hover-effect"></screenfull> -->
       </template>
 
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
         <div class="avatar-wrapper">
-          <span>\{{ name }}</span>
+          <div>\{{ name }}</div>
           <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
           <i class="el-icon-caret-bottom" />
         </div>
@@ -40,14 +41,14 @@ import { mapGetters } from 'vuex'
 import Hamburger from './hamburger'
 import Breadcrumb from './breadcrumb'
 import Search from './search'
-import ScreenFull from './screenfull'
+// import ScreenFull from './screenfull'
 
 export default {
   components: {
     Hamburger,
     Breadcrumb,
-    Search,
-    ScreenFull
+    Search
+    // ScreenFull
   },
   data() {
     return {
@@ -103,7 +104,7 @@ export default {
   .right-menu {
     float: right;
     height: 100%;
-    line-height: 50px;
+    line-height: 40px;
 
     &:focus {
       outline: none;
