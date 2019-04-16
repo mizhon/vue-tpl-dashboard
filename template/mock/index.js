@@ -70,6 +70,6 @@ const paramToObj = (url) => {
 }
 
 export default mocks.map(route => {
-  console.log('[<--- mock response route --->]', route)
+  // console.log('[<--- mock response route --->]', route)
   return responseFake(route.url, route.type, route.response)
 })
