@@ -11,13 +11,13 @@ const users = {
   'admin-token': {
     roles: ['admin'],
     introduction: '角色 - administrator',
-    avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+    avatar: require('./images/gitlab.png'),
     name: 'Super Admin'
   },
   'editor-token': {
     roles: ['editor'],
     introduction: '角色 - editor',
-    avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+    avatar: require('./images/gitlab.png'),
     name: 'Normal Editor'
   }
 }

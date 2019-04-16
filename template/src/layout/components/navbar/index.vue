@@ -136,10 +136,12 @@ export default {
         margin-top: 5px;
 
         .user-name {
-          display: inline-block;
+          // display: inline-block;
+          float: left;
           line-height: 40px;
           font-size: 14px;
           vertical-align: middle;
+          margin-right: 10px;
         }
         .user-avatar {
           cursor: pointer;
