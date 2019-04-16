@@ -63,7 +63,7 @@ export const asyncRoutes = [
     redirect: 'nodirect',
     alwaysShow: true, // will always show the root menu
     meta: {
-      title: 'permission',
+      title: '权限测试页',
       icon: 'iconfont icon-ic_opt_feature',
       roles: ['admin', 'editor'] // you can set roles in root nav
     },
