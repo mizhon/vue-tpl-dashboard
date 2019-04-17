@@ -35,7 +35,6 @@
 <script>
 import path from 'path'
 import ScrollPane from './tagbar'
-// import { generateTitle } from '@utils/i18n'
 
 export default {
   components: {

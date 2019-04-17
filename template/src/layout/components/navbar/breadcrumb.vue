@@ -26,17 +26,6 @@ export default {
     this.getBreadcrumb()
   },
   methods: {
-    // 获取面包屑标题
-    // generateTitle,
-    // generateTitle(title) {
-    //   const hasKey = this.$te('route.' + title)
-    //   if (hasKey) {
-    //     // $t :this method from vue-i18n, inject in @/lang/index.js
-    //     const translatedTitle = this.$t('route.' + title)
-    //     return translatedTitle
-    //   }
-    //   return title
-    // },
     getBreadcrumb() {
       let matched = this.$route.matched.filter(item => item.name)
       const first = matched[0]
