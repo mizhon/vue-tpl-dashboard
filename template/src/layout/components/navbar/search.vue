@@ -1,6 +1,6 @@
 <template>
   <div :class="{ 'show': show }" class="header-search">
-    <icon :icon-class="iconClass"/>
+    <icon class="search-icon" :icon-class="iconClass"/>
     <el-select
       ref="headerSearchSelect"
       v-model="search"
@@ -151,7 +151,6 @@ export default {
   font-size: 0 !important;
 
   .search-icon {
-    cursor: pointer;
     font-size: 18px;
     vertical-align: middle;
   }
