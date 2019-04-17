@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <icon :icon-class="isFullscreen ? 'icon-narrow': 'icon-fullscreen'" @click="click"></icon>
+  <div class="screen-full" @click="click">
+    <icon :iconClass="isFullscreen ? 'iconfont icon-narrow' : 'iconfont icon-fullscreen'"></icon>
   </div>
 </template>
 
 <script>
-import screenfull from './screenfull'
+import screenfull from 'screenfull'
 
 export default {
   name: 'Screenfull',
@@ -49,12 +49,7 @@ export default {
 </script>
 
 <style scoped>
-.screenfull-svg {
-  display: inline-block;
-  cursor: pointer;
-  fill: #5a5e66;;
-  width: 20px;
-  height: 20px;
-  vertical-align: 10px;
+.screen-full {
+  vertical-align: middle;
 }
 </style>

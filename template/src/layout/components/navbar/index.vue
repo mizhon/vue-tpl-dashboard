@@ -8,9 +8,9 @@
     <div class="right-menu">
       <template v-if="device !== 'mobile'">
         <!-- 搜索栏 -->
-        <!-- <search id="header-search" class="right-menu-item"></search> -->
+        <search id="header-search" class="right-menu-item"></search>
         <!-- 全屏设置 -->
-        <!-- <screenfull id="screenfull" class="right-menu-item hover-effect"></screenfull> -->
+        <screen-full id="screenfull" class="right-menu-item hover-effect"></screen-full>
       </template>
 
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
@@ -40,15 +40,15 @@
 import { mapGetters } from 'vuex'
 import Hamburger from './hamburger'
 import Breadcrumb from './breadcrumb'
-// import Search from './search'
-// import ScreenFull from './screenfull'
+import Search from './search'
+import ScreenFull from './screenfull'
 
 export default {
   components: {
     Hamburger,
-    Breadcrumb
-    // Search
-    // ScreenFull
+    Breadcrumb,
+    Search,
+    ScreenFull
   },
   data() {
     return {
