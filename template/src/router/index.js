@@ -60,7 +60,7 @@ export const asyncRoutes = [
   {
     path: '/permission',
     component: Layout,
-    redirect: 'nodirect',
+    redirect: 'noredirect',
     alwaysShow: true, // will always show the root menu
     meta: {
       title: '权限测试页',
