@@ -1,9 +1,9 @@
 import config from '../../config/index'
 // 需配置clientId
-const clinetId
-const ssoURL = process.env.NODE_ENV === 'testing' ?
-  config.dev.ssoURL:
-  config.prod.ssoURL
+const clinetId = ''
+const ssoURL = process.env.NODE_ENV === 'testing'
+  ? config.dev.ssoURL
+  : config.prod.ssoURL
 
 export const randomString = len => {
   let rt = ''
@@ -19,7 +19,7 @@ export const randomString = len => {
   return rt
 }
 
-export const getSSOLgoinURL = (to = null) => {
+export const getSSOLoginURL = (to = null) => {
   return ssoURL + 'staff/login?' + [
     'state=' + randomString(32),
     'client_id' + clinetId,
@@ -28,5 +28,5 @@ export const getSSOLgoinURL = (to = null) => {
 }
 
 export const redirectToSSO = (to = null) => {
-  location.href = getSSOLgoinURL(to)
+  location.href = getSSOLoginURL(to)
 }
