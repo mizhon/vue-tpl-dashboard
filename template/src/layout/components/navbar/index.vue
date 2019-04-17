@@ -7,10 +7,10 @@
     <!-- 顶部导航栏右侧菜单 -->
     <div class="right-menu">
       <template v-if="device !== 'mobile'">
-        <!-- 搜索栏 -->
-        <search id="header-search" class="right-menu-item"></search>
         <!-- 全屏设置 -->
         <screen-full id="screenfull" class="right-menu-item hover-effect"></screen-full>
+        <!-- 搜索栏 -->
+        <search id="header-search" class="right-menu-item"></search>
       </template>
 
       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
