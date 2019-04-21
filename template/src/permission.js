@@ -6,6 +6,8 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { Message } from 'element-ui'
 import { getToken } from '@utils/auth'
+// 支持单点登录
+// import { redirectToSSO } from '@utils/sso'
 
 // NProgress configuration
 NProgress.configure({ showSpinner: false })

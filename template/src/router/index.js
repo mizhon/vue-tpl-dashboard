@@ -3,6 +3,8 @@ import Router from 'vue-router'
 /* Layout */
 import Layout from '@/layout'
 
+import iconsRoute from './modules/icons'
+
 Vue.use(Router)
 
 /**
@@ -43,13 +45,15 @@ export const constantRoutes = [
         name: 'Dashboard',
         meta: {
           title: '首页',
-          icon: 'iconfont icon-shouye', // 'dashboard',
+          icon: 'iconfont icon-homepage',
           noCache: true,
           affix: true
         }
       }
     ]
-  }
+  },
+  // 图标路由
+  iconsRoute
 ]
 
 /**
@@ -58,13 +62,13 @@ export const constantRoutes = [
  */
 export const asyncRoutes = [
   {
-    path: '/permission',
+    path: '/demo/permission',
     component: Layout,
     redirect: 'noredirect',
     alwaysShow: true, // will always show the root menu
     meta: {
       title: '权限测试页',
-      icon: 'iconfont icon-ic_opt_feature',
+      icon: 'iconfont icon-access',
       roles: ['admin', 'editor'] // you can set roles in root nav
     },
     children: [
