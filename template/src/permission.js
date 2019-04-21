@@ -6,6 +6,8 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { Message } from 'element-ui'
 import { getToken } from '@utils/auth'
+// 支持水印
+import { buildWaterMark } from '@utils/watermark'
 // 支持单点登录
 // import { redirectToSSO } from '@utils/sso'
 
@@ -22,6 +24,9 @@ router.beforeEach(async (to, from, next) => {
   const hasToken = getToken()
 
   if (hasToken) {
+    // 如果有 token，显示的页面加水印
+    buildWaterMark()
+
     if (to.path === '/login') {
       // if is logged in, redirect to the home page
       next({ path: '/' })
