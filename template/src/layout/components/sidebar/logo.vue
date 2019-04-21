@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      title: '蛋壳后台 Admin',
+      title: 'Vue Admin',
       logo: require('../../../assets/imgs/logo.png')
     }
   }
