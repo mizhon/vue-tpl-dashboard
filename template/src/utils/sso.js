@@ -1,9 +1,14 @@
 import config from '../../config/index'
+
+/**
+ * 单点登录配置文件
+ */
+
 // 需配置clientId
-const clinetId = ''
+const clinetId = config.clinetId
 const ssoURL = process.env.NODE_ENV === 'testing'
-  ? config.dev.ssoURL
-  : config.prod.ssoURL
+  ? config.dev.SSO_BASE_URL
+  : config.prod.SSO_BASE_URL
 
 export const randomString = len => {
   let rt = ''
